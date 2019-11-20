@@ -37,12 +37,12 @@ public class Flight {
 
 
     public void print() {
-        System.out.println("      ------- FLIGHT INFO -------      ");
-        System.out.println(" Id: " + getId());
-        System.out.println(" Max passengers: " + getMaxPassengers());
-        System.out.println(" Curr passengers: " + getCurrPassengers());
-        System.out.println(" Start point: " + getStartPoint());
-        System.out.println(" End point: " + getEndPoint());
-        System.out.println("      ---------------------------      ");
+        System.out.println("------- FLIGHT INFO -------");
+        System.out.println("  Id: " + getId());
+        System.out.println("  Max passengers: " + getMaxPassengers());
+        System.out.println("  Curr passengers: " + getCurrPassengers());
+        System.out.println("  Start point: " + getStartPoint());
+        System.out.println("  End point: " + getEndPoint());
+        System.out.println();
     }
 }
