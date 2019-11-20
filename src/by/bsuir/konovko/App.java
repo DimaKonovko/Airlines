@@ -1,7 +1,7 @@
 package by.bsuir.konovko;
 
-import by.bsuir.konovko.flight.*;
-import by.bsuir.konovko.handlers.AddFlightHandler;
+import by.bsuir.konovko.flight.Flight;
+import by.bsuir.konovko.handlers.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -30,6 +30,9 @@ public class App {
 
                 switch (input) {
                     case 1:
+                        new PrintFlightHandler(flights);
+                        break;
+                    case 2:
                         new AddFlightHandler(flights);
                         break;
                     case 0:
@@ -49,6 +52,7 @@ public class App {
         System.out.println("              MENU             ");
         System.out.println("-------------------------------");
         System.out.println("   1. Print all flights        ");
+        System.out.println("   2. Add flight               ");
         System.out.println("   0. Exit                     ");
         System.out.print("             Your choice: ");
     }
