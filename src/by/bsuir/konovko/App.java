@@ -1,6 +1,6 @@
 package by.bsuir.konovko;
 
-import by.bsuir.konovko.flight.Flight;
+import by.bsuir.konovko.models.*;
 import by.bsuir.konovko.handlers.*;
 
 import java.util.ArrayList;
@@ -41,6 +41,9 @@ public class App {
                     case 4:
                         new UpdateFlightHandler(flights);
                         break;
+                    case 5:
+                        new FindFlightHandler(flights);
+                        break;
                     case 0:
                         return;
                 }
@@ -61,6 +64,7 @@ public class App {
         System.out.println("   2. Add flight               ");
         System.out.println("   3. Delete flight            ");
         System.out.println("   4. Update flight            ");
+        System.out.println("   5. Find flight by id        ");
         System.out.println("   0. Exit                     ");
         System.out.print("             Your choice: ");
     }

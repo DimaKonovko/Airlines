@@ -1,9 +1,8 @@
 package by.bsuir.konovko.handlers;
 
-import by.bsuir.konovko.flight.Flight;
+import by.bsuir.konovko.models.Flight;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Scanner;
 
 public class DeleteFlightHandler {
