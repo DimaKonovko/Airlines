@@ -1,6 +1,8 @@
-package by.bsuir.konovko.models;
+package by.bsuir.konovko.airlines.bean;
 
-public class Passenger {
+import java.io.Serializable;
+
+public class Passenger implements Serializable {
     // variables
     private static int base_id = 0;
     private int id;
@@ -23,13 +25,4 @@ public class Passenger {
         this.fio = fio;
         this.age = age;
     }
-
-    public void print() {
-        System.out.println("----- PASSENGER INFO -----");
-        System.out.println(" Id: " + id);
-        System.out.println(" FIO: " + fio);
-        System.out.println(" Age: " + age);
-        System.out.println();
-    }
-
 }

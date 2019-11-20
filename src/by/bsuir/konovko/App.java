@@ -1,7 +1,9 @@
 package by.bsuir.konovko;
 
-import by.bsuir.konovko.models.*;
-import by.bsuir.konovko.handlers.*;
+import by.bsuir.konovko.airlines.bean.Flight;
+import by.bsuir.konovko.airlines.menu.OutputMenu;
+import by.bsuir.konovko.airlines.service.impl.FlightServiceImpl;
+import by.bsuir.konovko.airlines.view.OutputFlights;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -24,25 +26,25 @@ public class App {
 
         int input;
         while (true) {
-            printMenu();
+            OutputMenu.printMenu();
             try {
                 input = Integer.parseInt(in.nextLine());
 
                 switch (input) {
                     case 1:
-                        new PrintFlightHandler(flights);
+                        OutputFlights.print(flights);
                         break;
                     case 2:
-                        new AddFlightHandler(flights);
+                        FlightServiceImpl.addFlight(flights);
                         break;
                     case 3:
-                        new DeleteFlightHandler(flights);
+                        FlightServiceImpl.deleteFlight(flights);
                         break;
                     case 4:
-                        new UpdateFlightHandler(flights);
+                        FlightServiceImpl.updateFlight(flights);
                         break;
                     case 5:
-                        new FindFlightHandler(flights);
+                        FlightServiceImpl.findFlights(flights);
                         break;
                     case 0:
                         return;
