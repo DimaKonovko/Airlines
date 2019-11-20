@@ -20,6 +20,6 @@ public class DeleteFlightHandler {
             }
         }
 
-        System.out.print(" There is no flight with id: " + id);
+        System.out.println(" There is no flight with id: " + id);
     }
 }

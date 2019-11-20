@@ -38,6 +38,9 @@ public class App {
                     case 3:
                         new DeleteFlightHandler(flights);
                         break;
+                    case 4:
+                        new UpdateFlightHandler(flights);
+                        break;
                     case 0:
                         return;
                 }
@@ -57,6 +60,7 @@ public class App {
         System.out.println("   1. Print all flights        ");
         System.out.println("   2. Add flight               ");
         System.out.println("   3. Delete flight            ");
+        System.out.println("   4. Update flight            ");
         System.out.println("   0. Exit                     ");
         System.out.print("             Your choice: ");
     }
