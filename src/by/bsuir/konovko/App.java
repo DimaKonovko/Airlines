@@ -35,6 +35,9 @@ public class App {
                     case 2:
                         new AddFlightHandler(flights);
                         break;
+                    case 3:
+                        new DeleteFlightHandler(flights);
+                        break;
                     case 0:
                         return;
                 }
@@ -48,11 +51,12 @@ public class App {
 
 
     private static void printMenu() {
-        System.out.println("-------------------------------");
-        System.out.println("              MENU             ");
-        System.out.println("-------------------------------");
+        System.out.println("#-----------------------------#");
+        System.out.println("             MENU              ");
+        System.out.println("#-----------------------------#");
         System.out.println("   1. Print all flights        ");
         System.out.println("   2. Add flight               ");
+        System.out.println("   3. Delete flight            ");
         System.out.println("   0. Exit                     ");
         System.out.print("             Your choice: ");
     }

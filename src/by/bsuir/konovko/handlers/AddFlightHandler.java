@@ -9,6 +9,7 @@ public class AddFlightHandler {
     public AddFlightHandler(ArrayList<Flight> flights) {
         Flight flight = new Flight(enterMaxPassengers(), enterStartPoint(), enterEndPoint());
         flights.add(flight);
+        System.out.println("Successfully added");
     }
 
 
@@ -19,7 +20,7 @@ public class AddFlightHandler {
 
         while (true) {
             try {
-                System.out.println(" Enter max passengers: ");
+                System.out.print(" Enter max passengers: ");
                 maxPassengers = Integer.parseInt(in.nextLine());
                 break;
             }
