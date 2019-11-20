@@ -2,7 +2,8 @@ package by.bsuir.konovko.flight;
 
 public class Flight {
     // variables
-    private static int id = 0;
+    private static int base_id = 0;
+    private int id;
     private int maxPassengers;
     private int currPassengers;
     private String startPoint;
@@ -24,9 +25,10 @@ public class Flight {
 
 
 
-    public Flight(int passengersNumber, String startPoint, String endPoint) {
-        id++;
-        this.maxPassengers = passengersNumber;
+    public Flight(int maxPassengers, String startPoint, String endPoint) {
+        base_id++;
+        this.id = base_id;
+        this.maxPassengers = maxPassengers;
         this.currPassengers = 0;
         this.startPoint = startPoint;
         this.endPoint = endPoint;
@@ -35,11 +37,12 @@ public class Flight {
 
 
     public void print() {
-        System.out.println("      ------------------      " );
+        System.out.println("      ------- FLIGHT INFO -------      ");
         System.out.println(" Id: " + getId());
         System.out.println(" Max passengers: " + getMaxPassengers());
         System.out.println(" Curr passengers: " + getCurrPassengers());
         System.out.println(" Start point: " + getStartPoint());
         System.out.println(" End point: " + getEndPoint());
+        System.out.println("      ---------------------------      ");
     }
 }
