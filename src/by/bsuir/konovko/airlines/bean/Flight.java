@@ -1,4 +1,4 @@
-package by.bsuir.konovko.models;
+package by.bsuir.konovko.airlines.bean;
 
 import java.util.ArrayList;
 
@@ -36,43 +36,5 @@ public class Flight {
         this.startPoint = startPoint;
         this.endPoint = endPoint;
         this.passengers = new ArrayList<Passenger>();
-    }
-
-
-
-    public void loadPassenger(Passenger passenger) {
-        if (passengers.contains(passenger)) {
-            System.out.println(" The passenger already exist");
-        }
-        else {
-            if (passengers.size() == maxPassengers) {
-                System.out.println(" Passengers limit reached");
-            }
-            else {
-                passengers.add(passenger);
-                System.out.println("Successfully loaded");
-            }
-        }
-    }
-
-
-
-    public void print() {
-        System.out.println("------- FLIGHT INFO -------");
-        System.out.println("    Id: " + getId());
-        System.out.println("    Max passengers: " + getMaxPassengers());
-        System.out.println("    Curr passengers: " + getCurrPassengers());
-        System.out.println("    Start point: " + getStartPoint());
-        System.out.println("    End point: " + getEndPoint());
-        System.out.println("  Passengers:");
-        if (passengers.isEmpty()) {
-            System.out.println("  There are no passengers");
-        }
-        else {
-            for (var passenger : passengers) {
-                passenger.print();
-            }
-        }
-        System.out.println();
     }
 }
