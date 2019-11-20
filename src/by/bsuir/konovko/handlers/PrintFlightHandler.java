@@ -1,6 +1,6 @@
 package by.bsuir.konovko.handlers;
 
-import by.bsuir.konovko.flight.Flight;
+import by.bsuir.konovko.models.Flight;
 
 import java.util.ArrayList;
 
