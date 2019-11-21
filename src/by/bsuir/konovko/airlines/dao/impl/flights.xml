@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="11.0.4" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="by.bsuir.konovko.airlines.bean.Flight">
+    <void property="endPoint">
+     <string>Moskva</string>
+    </void>
+    <void property="maxPassengers">
+     <int>21</int>
+    </void>
+    <void property="startPoint">
+     <string>Minsk</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="by.bsuir.konovko.airlines.bean.Flight">
+    <void property="endPoint">
+     <string>asdasd</string>
+    </void>
+    <void property="maxPassengers">
+     <int>2</int>
+    </void>
+    <void property="startPoint">
+     <string>Minsk</string>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

@@ -1,8 +1,9 @@
 package by.bsuir.konovko.airlines.bean;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Flight {
+public class Flight implements Serializable {
     // variables
     private static int base_id = 0;
     private int id;
@@ -27,6 +28,11 @@ public class Flight {
     public void setEndPoint(String endPoint) { this.endPoint = endPoint; }
 
 
+
+    public Flight() {
+        base_id++;
+        this.id = base_id;
+    }
 
     public Flight(int maxPassengers, String startPoint, String endPoint) {
         base_id++;
