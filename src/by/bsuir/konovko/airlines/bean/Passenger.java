@@ -19,6 +19,13 @@ public class Passenger implements Serializable {
     public void setFio(String fio) { this.fio = fio; }
     public void setAge(int age) { this.age = age; }
 
+
+
+    public Passenger() {
+        base_id++;
+        this.id = base_id;
+    }
+
     public Passenger(String fio, int age) {
         base_id++;
         this.id = base_id;

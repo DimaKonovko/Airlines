@@ -1,6 +1,8 @@
 package by.bsuir.konovko;
 
 import by.bsuir.konovko.airlines.bean.Flight;
+import by.bsuir.konovko.airlines.dao.factory.DAOFactory;
+import by.bsuir.konovko.airlines.dao.impl.XmlSerializer;
 import by.bsuir.konovko.airlines.menu.OutputMenu;
 import by.bsuir.konovko.airlines.service.impl.FlightServiceImpl;
 import by.bsuir.konovko.airlines.view.OutputFlights;
@@ -15,8 +17,10 @@ public class App {
 
 
     // methods
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        flights = DAOFactory.getFlightsDAO();
         manageHandlers();
+        XmlSerializer.writeFlights(flights);
     }
 
 
@@ -54,20 +58,5 @@ public class App {
                 System.out.println(e.toString());
             }
         }
-    }
-
-
-
-    private static void printMenu() {
-        System.out.println("#-----------------------------#");
-        System.out.println("             MENU              ");
-        System.out.println("#-----------------------------#");
-        System.out.println("   1. Print all flights        ");
-        System.out.println("   2. Add flight               ");
-        System.out.println("   3. Delete flight            ");
-        System.out.println("   4. Update flight            ");
-        System.out.println("   5. Find flight by id        ");
-        System.out.println("   0. Exit                     ");
-        System.out.print("             Your choice: ");
     }
 }
